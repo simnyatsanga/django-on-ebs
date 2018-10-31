@@ -26,7 +26,7 @@ SECRET_KEY = 'foo_bar'
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    'you-host-on-ebs',
+    'your-host-on-ebs',
     'localhost'
 ]
 

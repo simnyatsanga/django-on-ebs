@@ -1,4 +1,5 @@
 import boto3
+import datetime
 from django.http import HttpResponse
 from django.template.loader import get_template
 from django.template import RequestContext
@@ -23,6 +24,9 @@ def create_note(request):
     note_text = request.POST['note']
     dynamodb = boto3.client('dynamodb', region_name='us-east-1')
     note = {
+        'time_stamp': {
+            'S': datetime.datetime.now().isoformat()
+        },
         'name': {
             'S': name
         },
@@ -31,6 +35,6 @@ def create_note(request):
         }
     }
     response = dynamodb.put_item(
-        TableName='doctors_note',
+        TableName='doctors_notes',
         Item=note
     )
