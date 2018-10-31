@@ -26,7 +26,7 @@ SECRET_KEY = 'foo_bar'
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    'django-env.ravtimp7d7.us-east-1.elasticbeanstalk.com',
+    'you-host-on-ebs',
     'localhost'
 ]
 
