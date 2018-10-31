@@ -1,0 +1,7 @@
+
+# Elastic Beanstalk Files
+.elasticbeanstalk/*
+!.elasticbeanstalk/*.cfg.yml
+!.elasticbeanstalk/*.global.yml
+ebdjango/ebjango/__pycache__/
+db.sqlite3
